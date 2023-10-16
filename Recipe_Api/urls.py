@@ -16,16 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import (
-  SpectacularAPIView,
-  SpectacularRedocView,
-  SpectacularSwaggerView
+    SpectacularAPIView,
+    SpectacularRedocView,
+    SpectacularSwaggerView,
 )
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
-    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
-    path('api/doc/', SpectacularSwaggerView.as_view(url_name='schema'), name='api-docs'),
-    path('api/user/', include('users.urls')),
-    path('api/recipe/', include('recipe.urls')),
+    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("api/redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
+    path(
+        "api/doc/", SpectacularSwaggerView.as_view(url_name="schema"), name="api-docs"
+    ),
+    path("api/user/", include("users.urls")),
+    path("api/recipe/", include("recipe.urls")),
+    path("api/recipe/tags/", include("tags.urls")),
 ]
