@@ -4,8 +4,9 @@ __pycache__/
 *$py.class
 
 # C extensions
+.DS_Store
 *.so
-
+.vscode/settings.json
 # Distribution / packaging
 .Python
 build/
