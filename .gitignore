@@ -1,4 +1,5 @@
 # Byte-compiled / optimized / DLL files
+.gitignore
 __pycache__/
 *.py[cod]
 *$py.class
@@ -6,8 +7,10 @@ __pycache__/
 # C extensions
 .DS_Store
 *.so
-.vscode/settings.json
+
 # Distribution / packaging
+.DS_Store
+.vscode/settings.json
 .Python
 build/
 develop-eggs/
