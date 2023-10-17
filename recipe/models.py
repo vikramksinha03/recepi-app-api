@@ -1,6 +1,7 @@
 from django.db import models
 from rest_framework.settings import settings
 from tags.models import Tag
+from ingredient.models import Ingredient
 
 # Create your models here.
 
@@ -13,6 +14,7 @@ class Recipe(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     link = models.CharField(max_length=255, blank=True)
     tags = models.ManyToManyField(Tag)
+    ingredient = models.ManyToManyField(Ingredient)
 
     def __str__(self):
         return self.title

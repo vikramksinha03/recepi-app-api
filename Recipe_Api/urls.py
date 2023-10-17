@@ -30,5 +30,6 @@ urlpatterns = [
     ),
     path("api/user/", include("users.urls")),
     path("api/recipe/", include("recipe.urls")),
-    path("api/recipe/tags/", include("tags.urls")),
+    path("api/recipe/", include("tags.urls")),
+    path("api/recipe/", include("ingredient.urls")),
 ]
